@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="card">
+        <img src="profile-image.jpeg" alt="godstime01" data-testid="slackDisplayImage">
+
+        <div class="card--info">
+            <h2 data-testid="slackUserName">Mgboawaji Williamson Ikpaiko</h2>
+            <p>Track: <span data-testid="myTrack">Frontend</span></p>
+            <div class="flex">
+                <p>
+                    UTC time:
+                    <span data-testid="currentUTCTime"></span>
+                </p>
+
+                <p>
+                    Current day:
+                    <span data-testid="currentDayOfTheWeek"></span>
+                </p>
+            </div>
+            <a href="https://www.github.com/godstime01" target="_blank" data-testid="githubURL" class="btn">Check out my github</a>
+        </div>
+    </div>
+
+    <script>
+
+        const currentDate = new Date().getDay()
+        console.log(currentDate)
+        const utcTime = new Date().getUTCMilliseconds()
+        console.log(utcTime)
+        let c = null
+
+        switch (currentDate){
+            case 0: c = "sunday"; break;
+            case 1: c = "monday"; break;
+            case 2: c = "tuesday"; break;
+            case 3: c = "wednesday"; break;
+            case 4: c = "thursday"; break;
+            case 5: c = "friday"; break;
+            case 6: c = "saturday"; break;
+        }
+        
+        const cdate = document.querySelector("[data-testid='currentDayOfTheWeek']")
+        const ctime = document.querySelector("[data-testid='currentUTCTime']")
+
+        cdate.innerHTML = c
+        ctime.innerHTML = utcTime
+        
+    </script>
+</body>
+</html>
