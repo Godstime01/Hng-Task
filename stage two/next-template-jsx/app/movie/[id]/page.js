@@ -42,7 +42,7 @@ const movieDetail = async ({ params }) => {
             {/* main content */}
             <div className="">
                 <Card >
-                    <Image src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path}`} width={500} height={500} className="w-full" alt="" />
+                    <Image src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path}`} width={500} height={500} className="w-full" al />
                     {/* {data.video} */}
                 </Card>
 
@@ -54,7 +54,7 @@ const movieDetail = async ({ params }) => {
 
                         {
                             data.genres.map(genre => {
-                                return <span key={genre.id} className="bg-pink-100 text-[deeppink] rounded-md p-2" key={genre.id}>{genre.name}</span>
+                                return <span className="bg-pink-100 text-[deeppink] rounded-md p-2" key={genre.id}>{genre.name}</span>
                             })
                         }
                         
