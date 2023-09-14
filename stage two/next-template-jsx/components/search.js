@@ -66,7 +66,7 @@ const Search = () => {
               result.map(q => {
                 return <Link key={q.id} href={`movie/${q.id}`} className=" w-full" >
                   <Card className="flex gap-2 items-center p-2 rounded-sm">
-                    <Image src={`https://image.tmdb.org/t/p/w500${q.poster_path}`} width={20} height={20} />
+                    <Image src={`https://image.tmdb.org/t/p/w500${q.poster_path}`} width={20} height={20} alt='' />
                     <h3 className='flex-grow text-xs'>{q.title}</h3>
                     <span className='text-xs'>({q.release_date.slice(0, 4)})</span>
                   </Card>
