@@ -92,7 +92,7 @@ export default async function Home() {
               <Link data-testid="movie-card" key={data.id} href={`movie/${data.id}`}>
                 <Card className="p-0 relative">
                   <CardHeader className="p-0 overflow-hidden">
-                    <Image src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} className="w-full" width={500} height={500} data-testid="movie-poster" />
+                    <Image src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} className="w-full" width={500} height={500} data-testid="movie-poster" alt="" />
                   </CardHeader>
                   <CardContent className="p-3">
                     <p>Release date: <span data-testid="movie-release-date">{data.release_date}</span> </p>
