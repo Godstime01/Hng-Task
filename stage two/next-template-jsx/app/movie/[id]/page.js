@@ -32,34 +32,34 @@ const movieDetail = async ({ params }) => {
                 {/* side bar */}
                 <aside className="flex flex-col justify-between rounded-r-lg py-9">
 
-                    <Link className="text-xl flex gap-3 items-center w-full rounded-xl p-4" href="/">
+                    <Link className="text-xl flex gap-3 items-center w-full p-4 hover:bg-pink-300/50 hover:text-pink-700" href="/">
                         <HomeIcon className="" />
                         <span className="hidden md:inline-block">MovieBox</span>
                     </Link>
 
                     <div className="flex flex-col gap-y-4">
-                        <Link className="text-xl flex gap-3 items-center w-full rounded-xl p-4" href="/">
+                        <Link className="text-xl flex gap-3 items-center w-full p-4 hover:bg-pink-300/50 hover:text-pink-700" href="/">
                             <HomeIcon className="" />
                             <span className="hidden md:inline-block">Home</span>
                         </Link>
 
-                        <Link className="text-xl flex gap-3 items-center w-full rounded-xl p-4" href="/">
+                        <Link className="text-xl flex gap-3 items-center w-full p-4 hover:bg-pink-300/50 hover:text-pink-700" href="/">
                             <VideoIcon className="" />
                             <span className="hidden md:inline-block">Movies</span>
                         </Link>
 
-                        <Link className="text-xl flex gap-3 items-center w-full rounded-xl p-4" href="/">
+                        <Link className="text-xl flex gap-3 items-center w-full p-4 hover:bg-pink-300/50 hover:text-pink-700" href="/">
                             <DesktopIcon />
                             <span className="hidden md:inline-block">Tv Series</span>
                         </Link>
 
-                        <Link className="text-xl flex gap-3 items-center w-full rounded-xl p-4" href="/">
+                        <Link className="text-xl flex gap-3 items-center w-full p-4 hover:bg-pink-300/50 hover:text-pink-700" href="/">
                             <CalendarIcon />
                             <span className="hidden md:inline-block">Upcoming</span>
                         </Link>
                     </div>
 
-                    <Link className="text-xl flex gap-3 items-center w-full rounded-xl p-4" href="/">
+                    <Link className="text-xl flex gap-3 items-center w-full p-4 hover:bg-pink-300/50 hover:text-pink-700" href="/">
                             <ExitIcon className="" />
                             <span className="hidden md:inline-block">Log out</span>
                     </Link>

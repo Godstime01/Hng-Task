@@ -54,14 +54,14 @@ const Search = () => {
 
   return (
     <div className='relative text-white'>
-      <div className="flex rounded-md overflow-hidden bg-transparent">
-        <Input className="text-white" placeholder="search.." value={search} onChange={e => setSearch(e.target.value)} />
+      <div className="flex rounded-md overflow-hidden bg-transparent w-full text-white placeholder:text-white">
+        <Input placeholder="search.." value={search} onChange={e => setSearch(e.target.value)} className="w-full text-white placeholder:text-white" />
       </div>
 
       {
         loading ? <Skeleton className="w-full p-4 absolute z-20 top-10" >loading...</Skeleton> :
 
-          search.length ? <Card className="p-2 absolute z-20 top-10 w-full rounded-none h-[300px] overflow-scroll grid gap-2">
+          search.length ? <Card className="p-2 absolute z-[999] top-10 w-full rounded-none h-[300px] overflow-scroll grid gap-2">
             {
               result.map(q => {
                 return <Link key={q.id} href={`movie/${q.id}`} className=" w-full" >

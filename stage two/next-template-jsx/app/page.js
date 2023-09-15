@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-import { HeartIcon } from "@radix-ui/react-icons"
+import { HeartIcon, HamburgerMenuIcon } from "@radix-ui/react-icons"
 import {
   Card,
   CardContent,
@@ -52,34 +52,41 @@ export default async function Home() {
 
       {/* navbar */}
       <nav className="fixed top-0 w-full py-3">
-        <div className="container flex justify-between">
-          <Link href="/" className="flex gap-2 items-center flex-grow text-white">
-            {/* <Image src="/tv.png" alt="Logo" width={40} height={40} />  */}
+        <div className="container flex items-center justify-between gap-1 md:gap-2">
+          <Link href="/" className="flex gap-2 items-center text-white">
+            {/* <Image src="@tv.png" alt="Logo" width={40} height={40} />  */}
             MovieBox
           </Link>
 
           <Search />
+
+          <div className="text-white flex items-center gap-3">
+            <span className="font-bold hidden md:inline-block">Sign in</span>
+            <span className="bg-pink-700 flex items-center p-2 rounded-full">
+              <HamburgerMenuIcon className="text-white" />
+            </span>
+          </div>
         </div>
       </nav>
 
       {/* hero section */}
-      <section className={`min-h-[90vh] flex items-center gap-2 pt-16 bg-no-repeat bg-cover bg-blend-multiply bg-purple-500 text-white`
+      <section className={`min-h-[90vh] flex items-center gap-2 pt-16 bg-no-repeat bg-cover bg-center bg-blend-multiply bg-purple-500 text-white`
       }
         style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${results[0].backdrop_path})` }}
       >
         <div className="container py-5">
           <div className="w-1/2 flex flex-col gap-5">
-            <h1 className="text-6xl">{results[0].title}</h1>
+            <h1 className="text-2xl md:text-6xl">{results[0].title}</h1>
             <div className="flex gap-3 items-center">
               <span className="bg-yellow-300 text-black rounded-md p-2">IMDb</span>
               <p>{results[0].vote_average} / 100</p>
 
             </div>
-            <p>
+            <p className="text-sm md:text-md">
               {results[0].overview}
             </p>
 
-            <Button className="bg-red-600 text-white flex-grow-0 w-1/5">Watch trailer</Button>
+            <Button className="bg-red-600 text-white flex-grow-0 w-1/5 rounded-full">Watch trailer</Button>
           </div>
         </div>
 
@@ -99,8 +106,8 @@ export default async function Home() {
                     <h3 className="text-xl" data-testid='movie-title' >{data.original_title}</h3>
                   </CardContent>
 
-                  <Button className="absolute top-0 right-0 m-3 bg-transparent">
-                    <HeartIcon />
+                  <Button className="absolute top-0 right-0 m-3 bg-transparent rounded-full bg-white">
+                    <HeartIcon className="text-pink-600" />
                   </Button>
 
                 </Card>
