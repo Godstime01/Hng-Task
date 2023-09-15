@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-import { HeartIcon, HamburgerMenuIcon } from "@radix-ui/react-icons"
+import { HeartIcon, HamburgerMenuIcon, ChevronRightIcon } from "@radix-ui/react-icons"
 import {
   Card,
   CardContent,
@@ -93,6 +93,14 @@ export default async function Home() {
       </section>
 
       <section className="container pt-16 grid md:grid-cols-4 gap-4">
+        <div className="col-span-full flex justify-between">
+          <h2 className="font-bold text-slate-700 text-2xl">Featured movie</h2>
+          <Link href={""} className="capitalize flex gap-2 text-pink-600 items-center" >
+
+            See more
+            <ChevronRightIcon />
+          </Link>
+        </div>
         {
           results.map(data => {
             return (
